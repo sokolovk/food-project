@@ -7,19 +7,19 @@ import {About} from "./pages/about";
 import {Contact} from "./pages/contact";
 import {Category} from "./pages/category";
 import {NotFound} from "./pages/notFound";
+import {Recipe} from "./pages/recipe";
 
 function App() {
     return <>
         <div className="App">
             <Header />
             <main className="container content">
-                <Routes>
+                <Routes basename="/react-food">
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contacts" element={<Contact />} />
-                    <Route path="/category" element={<Category />}>
-                        <Route path=":name" element={<Category />} />
-                    </Route>
+                    <Route path="/category/:name" element={<Category />} />
+                    <Route path="/meal/:id" element={<Recipe />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </main>

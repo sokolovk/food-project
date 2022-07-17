@@ -39,3 +39,22 @@ main {
 .card-content {
   flex-grow: 1;
 }
+
+.btn-wrap {
+  padding: 2rem 0;
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+iframe {
+  width: 600px;
+  height: 350px;
+}
+
+table {
+  width: 600px;
+  max-width: 100%;
+}

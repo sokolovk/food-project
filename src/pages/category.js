@@ -9,7 +9,6 @@ function Category() {
     const {name} = useParams();
     const [meals, setMeals] = useState([]);
     const navigate = useNavigate();
-    console.log(name);
 
     function goHome() {
         navigate("/");
@@ -22,6 +21,9 @@ function Category() {
 
     return <>
         {!meals.length ? <Preloder /> : <MealList meals={meals} /> }
+        <div className="btn-wrap">
+            <button className="btn" onClick={goHome}>Go home</button>
+        </div>
     </>
 
 }
